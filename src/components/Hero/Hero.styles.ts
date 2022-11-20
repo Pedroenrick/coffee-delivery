@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledHero = styled.section`
   display: flex;
   margin: 0 auto;
-  padding: 6rem 0 0 0;
+  padding: 6rem 0;
   max-width: 80%;
   line-height: 1.3;
 `;
@@ -23,7 +23,6 @@ export const TextHero = styled.div`
   h1 {
     font-family: "Baloo 2", cursive;
     font-size: 4.5rem;
-    color: ${({ theme }) => theme.colors["base-title"]};
   }
 
   p {

@@ -9,6 +9,12 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${({ theme }) => theme.colors.background};
     font-family: "Roboto", sans-serif;
   }
+  
+  h1, h2, h3{
+    font-family: "Baloo 2", cursive;
+    color: ${({ theme }) => theme.colors["base-title"]};
+    line-height: 1.3;
+  }
 
   button, a {
     cursor: pointer;
