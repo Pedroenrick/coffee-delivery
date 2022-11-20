@@ -1,5 +1,7 @@
 import { ThemeProvider } from "styled-components";
 import { Header } from "./components/Header/Header.component";
+import { Hero } from "./components/Hero/Hero.component";
+
 import GlobalStyle from "./styles/globalStyles";
 import light from "./styles/themes/light";
 
@@ -9,7 +11,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <Header />
-        <h1>Coffee Delivery testes</h1>
+        <Hero />
       </div>
     </ThemeProvider>
   );
