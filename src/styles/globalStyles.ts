@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
     background-color: ${({ theme }) => theme.colors.background};
+    font-family: "Roboto", sans-serif;
+  }
+
+  button, a {
+    cursor: pointer;
   }
 `;
 
