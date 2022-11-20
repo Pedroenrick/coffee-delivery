@@ -1,9 +1,16 @@
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./styles/globalStyles";
+import light from "./styles/themes/light";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Coffee Delivery</h1>
-    </div>
-  )
+    <ThemeProvider theme={light}>
+       <GlobalStyle /> 
+      <div className="App">
+        <h1>Coffee Delivery testes</h1>
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
