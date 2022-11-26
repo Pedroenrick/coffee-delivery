@@ -9,11 +9,11 @@ import {
   ContainerQuantity,
   ButtonAddToCart,
 } from "./CardCoffee.styles";
-import traditionalCoffee from "../../assets/coffees/expresso.png";
 import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { useState } from "react";
+import { CoffeeProps } from "./CardCoffee.types";
 
-export function CardCoffee() {
+export function CardCoffee({name, description, price, tags, image, altImg}: CoffeeProps) {
   const [quantity, setQuantity] = useState(1);
 
   function handleAddQuantity() {
@@ -28,20 +28,22 @@ export function CardCoffee() {
   return (
     <CardCoffeeContainer>
       <ContainerImage>
-        <img src={traditionalCoffee} alt="expresso" />
+        <img src={image} alt={altImg} />
       </ContainerImage>
 
       <TagContainer>
-        <Tag>TRADICIONAL</Tag>
+        {tags.map((tag) => (
+        <Tag>{tag}</Tag>
+        ))}
       </TagContainer>
-      <CoffeeTitle>Expresso Tradicional</CoffeeTitle>
+      <CoffeeTitle>{name}</CoffeeTitle>
       <CoffeeDescription>
-        O tradicional café feito com água quente e grãos moídos
+       {description}
       </CoffeeDescription>
 
       <ContainerCheckout>
         <p>
-          R$<span>9,90</span>
+          R$<span>{new Intl.NumberFormat('pt-BR').format(price)}</span>
         </p>
         <ContainerQuantity>
           <button onClick={handleRemoveQuantity}>

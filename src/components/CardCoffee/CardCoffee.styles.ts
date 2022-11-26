@@ -5,8 +5,8 @@ export const CardCoffeeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 304px;
-  height: 371px;
+  max-width: 284px;
+  height: 331px;
   width: 100%;
   background: ${({ theme }) => theme.colors["base-card"]};
   padding: 1rem;
