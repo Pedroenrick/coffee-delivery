@@ -13,7 +13,14 @@ import { Minus, Plus, ShoppingCart } from "phosphor-react";
 import { useState } from "react";
 import { CoffeeProps } from "./CardCoffee.types";
 
-export function CardCoffee({name, description, price, tags, image, altImg}: CoffeeProps) {
+export function CardCoffee({
+  name,
+  description,
+  price,
+  tags,
+  image,
+  altImg,
+}: CoffeeProps) {
   const [quantity, setQuantity] = useState(1);
 
   function handleAddQuantity() {
@@ -32,18 +39,16 @@ export function CardCoffee({name, description, price, tags, image, altImg}: Coff
       </ContainerImage>
 
       <TagContainer>
-        {tags.map((tag) => (
-        <Tag>{tag}</Tag>
+        {tags.map((tag, index: number) => (
+          <Tag key={index}>{tag}</Tag>
         ))}
       </TagContainer>
       <CoffeeTitle>{name}</CoffeeTitle>
-      <CoffeeDescription>
-       {description}
-      </CoffeeDescription>
+      <CoffeeDescription>{description}</CoffeeDescription>
 
       <ContainerCheckout>
         <p>
-          R$<span>{new Intl.NumberFormat('pt-BR').format(price)}</span>
+          R$<span>{new Intl.NumberFormat("pt-BR").format(price)}</span>
         </p>
         <ContainerQuantity>
           <button onClick={handleRemoveQuantity}>
