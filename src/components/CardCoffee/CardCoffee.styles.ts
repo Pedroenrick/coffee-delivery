@@ -38,7 +38,7 @@ export const Tag = styled.span`
   background: ${({ theme }) => theme.colors["yellow-light"]};
   color: ${({ theme }) => theme.colors["yellow-dark"]};
   font-size: 0.75rem;
-  padding: 0.2rem .7rem;
+  padding: 0.2rem 0.7rem;
   font-weight: bold;
   border-radius: 16px;
 `;
@@ -119,4 +119,23 @@ export const ButtonAddToCart = styled.button`
   &:hover {
     background: ${({ theme }) => theme.colors.purple};
   }
+`;
+
+export const ListCoffee = styled.div`
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+`;
+
+export const InfosCoffee = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const ActionsCoffee = styled.div`
+  display: flex;
+  width: 100%;
+  padding: 1rem;
 `;
