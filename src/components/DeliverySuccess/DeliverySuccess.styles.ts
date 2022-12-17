@@ -45,7 +45,7 @@ export const DollarIcon = styled(BaseIcon)`
 
 export const ContainerInfos = styled.div`
   width: 50%;
-  padding: 2rem;
+  padding: 1.8rem;
   background: linear-gradient(${({ theme }) => theme.colors.background}, ${({ theme }) => theme.colors.background}) padding-box,
   linear-gradient(to right, ${({ theme }) => theme.colors.yellow}, ${({ theme }) => theme.colors.purple}) border-box;
   border: 1px solid transparent;

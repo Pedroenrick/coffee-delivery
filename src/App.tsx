@@ -1,17 +1,22 @@
-import { Checkout } from "./components/Checkout/Checkout.components";
-import { CoffeeList } from "./components/CoffeeList/CoffeeList.component";
-import { DeliverySuccess } from "./components/DeliverySuccess/DeliverySuccess.component";
-import { Header } from "./components/Header/Header.component";
-import { Hero } from "./components/Hero/Hero.component";
+import {
+  Routes,
+  Route
+} from "react-router-dom";
+
+import { Home } from "./pages/Home.page";
+import { CheckoutPage } from "./pages/Checkout.page";
+import { Delivery } from "./pages/Delivery.page";
+import { NotFound } from "./pages/NotFound.page";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      {/* <Hero />
-      <CoffeeList />
-      <Checkout /> */}
-      <DeliverySuccess />
+       <Routes>
+        <Route index element={<Home />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+        <Route path="delivery" element={<Delivery />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
