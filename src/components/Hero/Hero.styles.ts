@@ -6,12 +6,26 @@ export const StyledHero = styled.section`
   padding: 6rem 0;
   max-width: 80%;
   line-height: 1.3;
+  gap: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `;
 
 export const ContainerTextHero = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 60%;
+
+  @media screen and (max-width: 1300px) {
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    max-width: 100%;
+  }
 `;
 
 export const TextHero = styled.div`
@@ -23,11 +37,23 @@ export const TextHero = styled.div`
   h1 {
     font-family: "Baloo 2", cursive;
     font-size: 4.5rem;
+
+    @media screen and (max-width: 1300px) {
+      font-size: 3.5rem;
+    }
+
+    @media screen and (max-width: 550px) {
+      font-size: 2.5rem;
+    }
   }
 
   p {
     font-size: 1.5rem;
     padding-bottom: 2rem;
+
+    @media screen and (max-width: 550px) {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -36,6 +62,20 @@ export const ContainerImage = styled.div`
   width: 100%;
   max-width: 40%;
   justify-content: center;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 550px) {
+    max-width: 100%;
+
+    img {
+      height: 70%;
+      width: 70%;
+    }
+  }
 `;
 
 export const Grid = styled.div`
@@ -56,6 +96,15 @@ export const Grid = styled.div`
       font-size: 1.2rem;
       padding: 0.5rem;
       margin: 0.2rem;
+    }
+  }
+
+  @media screen and (max-width: 650px) {
+    div {
+      flex-direction: column;
+      p {
+        width: 100%;
+      }
     }
   }
 `;

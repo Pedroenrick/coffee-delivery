@@ -48,7 +48,7 @@ export function CardCoffee({
 
       <ContainerCheckout>
         <p>
-          R$<span>{new Intl.NumberFormat("pt-BR").format(price)}</span>
+          R$<span>{price.toLocaleString('pt-br', {minimumFractionDigits: 2})}</span>
         </p>
         <ContainerQuantity>
           <button onClick={handleRemoveQuantity}>
